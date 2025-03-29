@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/raha-rn67/little-nehas-library-frontend/static/css/main.a590034c.css",
-    "main.js": "/raha-rn67/little-nehas-library-frontend/static/js/main.e735216c.js",
-    "static/js/453.07c41362.chunk.js": "/raha-rn67/little-nehas-library-frontend/static/js/453.07c41362.chunk.js",
-    "index.html": "/raha-rn67/little-nehas-library-frontend/index.html",
-    "main.a590034c.css.map": "/raha-rn67/little-nehas-library-frontend/static/css/main.a590034c.css.map",
-    "main.e735216c.js.map": "/raha-rn67/little-nehas-library-frontend/static/js/main.e735216c.js.map",
-    "453.07c41362.chunk.js.map": "/raha-rn67/little-nehas-library-frontend/static/js/453.07c41362.chunk.js.map"
+    "main.css": "/little-nehas-library-frontend/static/css/main.a590034c.css",
+    "main.js": "/little-nehas-library-frontend/static/js/main.ddb65a79.js",
+    "static/js/453.07c41362.chunk.js": "/little-nehas-library-frontend/static/js/453.07c41362.chunk.js",
+    "index.html": "/little-nehas-library-frontend/index.html",
+    "main.a590034c.css.map": "/little-nehas-library-frontend/static/css/main.a590034c.css.map",
+    "main.ddb65a79.js.map": "/little-nehas-library-frontend/static/js/main.ddb65a79.js.map",
+    "453.07c41362.chunk.js.map": "/little-nehas-library-frontend/static/js/453.07c41362.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a590034c.css",
-    "static/js/main.e735216c.js"
+    "static/js/main.ddb65a79.js"
   ]
 }
