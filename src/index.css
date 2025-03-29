@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+.library-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  color: #004d40;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Heart Animation */
+@keyframes heartExpand {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+.heart-book {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: #008080;
+  transform: rotate(-45deg);
+  animation: heartExpand 1.2s ease-in-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.heart-book::before,
+.heart-book::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #008080;
+  border-radius: 50%;
+}
+
+.heart-book::before {
+  top: -75px;
+  left: 0;
+}
+
+.heart-book::after {
+  left: 75px;
+  top: 0;
+}
+
+/* Book Form */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: linear-gradient(135deg, #008080, #00bfa5);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.book-form input,
+.book-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-form input:focus,
+.book-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.book-form button {
+  background: #005f5f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-form button:hover {
+  background: #004d40;
+  transform: translateY(-2px);
+}
+
+/* Book List */
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.book {
+  background: #ffffff;
+  padding: 20px;
+  border-left: 6px solid #008080;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: bookEntry 0.5s ease-in-out;
+}
+
+@keyframes bookEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #00bfa5, #005f5f);
+  transition: all 0.5s ease-in-out;
+}
+
+.book:hover::before {
+  height: 100%;
+  opacity: 0.1;
+}
+
+.book:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.book h3 {
+  font-size: 20px;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.book p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Buttons */
+.book-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.book-actions button {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-actions button:hover {
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background: #d9534f;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .library-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .book-form {
+    padding: 20px;
+  }
+
+  .book-list {
+    gap: 15px;
+  }
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin:10px;
+}
+
+.logout-btn:hover {
+  background: #a71d2a;
+  transform: translateY(-2px);
+}
+
+/* Cancel Button */
+.book-form button:nth-of-type(2) {
+  background: #ff9800;
+  color: #fff;
+}
+
+.book-form button:nth-of-type(2):hover {
+  background: #e68900;
+  transform: translateY(-2px);
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #008080, #00bfa5);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login Form */
+.login-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers all child elements */
+  justify-content: center;
+}
+
+.login-form h2 {
+  font-size: 22px;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 80%; /* Adjusts width to fit better */
+  max-width: 300px; /* Ensures it doesn't stretch too wide */
+  margin: 10px auto; /* Ensures proper centering */
+}
+
+.login-form input:focus {
+  border-color: #008080;
+  transform: scale(1.02);
+}
+
+.login-form button {
+  background: #005f5f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 350px;
+  margin-top: 15px;
+}
+
+.login-form button:hover {
+  background: #004d40;
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.heart-book {
+  background-color: #E36A7C; /* Soft Pink */
+}
+
+.heart-book::before,
+.heart-book::after {
+  background-color: #E36A7C;
+}
+
+h1, .book h3, .login-form h2 {
+  color: #E36A7C; /* Pink Accent */
+}
+
+/* .book-form {
+  background: linear-gradient(135deg, #008080, #E36A7C);
+} */
+
+.book {
+  border-left: 6px solid #E36A7C;
+}
+
+/* .book::before {
+  background: linear-gradient(90deg, #00bfa5, #E36A7C);
+}
+
+.book-form button, .login-form button {
+  background: linear-gradient(135deg, #004d40, #E36A7C);
+}
+
+.book-form button:hover, .login-form button:hover {
+  background: linear-gradient(135deg, #E36A7C, #004d40);
+}
+
+.login-container {
+  background: linear-gradient(135deg, #008080, #E36A7C);
+} */
+
+.delete-btn, .logout-btn {
+  background: #E36A7C;
+}
+
+.delete-btn:hover, .logout-btn:hover {
+  background: #C84F65; /* Darker pink */
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* Book Page Opening Animation */
+@keyframes bookOpen {
+  0% {
+    transform: perspective(1000px) rotateY(-90deg) translateX(-100%) scale(0.8);
+    opacity: 0;
+    background-color: #004d40;
+  }
+  50% {
+    transform: perspective(1000px) rotateY(20deg) translateX(-50%) scale(1.02);
+    opacity: 0.7;
+    background-color: #E36A7C;
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0) translateX(0) scale(1);
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+@keyframes bookClose {
+  0% {
+    transform: perspective(1000px) rotateY(0) translateX(0) scale(1);
+    opacity: 1;
+    background-color: transparent;
+  }
+  50% {
+    transform: perspective(1000px) rotateY(20deg) translateX(50%) scale(1.02);
+    opacity: 0.7;
+    background-color: #E36A7C;
+  }
+  100% {
+    transform: perspective(1000px) rotateY(90deg) translateX(100%) scale(0.8);
+    opacity: 0;
+    visibility: hidden;
+    background-color: #004d40;
+  }
+}
+
+.page-enter {
+  animation: bookOpen 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.page-exit {
+  animation: bookClose 0.7s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
