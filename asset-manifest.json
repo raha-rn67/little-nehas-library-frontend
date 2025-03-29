@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/little-nehas-library-frontend/static/css/main.a590034c.css",
-    "main.js": "/little-nehas-library-frontend/static/js/main.ca2bfd72.js",
+    "main.js": "/little-nehas-library-frontend/static/js/main.25beaab1.js",
     "static/js/453.07c41362.chunk.js": "/little-nehas-library-frontend/static/js/453.07c41362.chunk.js",
     "index.html": "/little-nehas-library-frontend/index.html",
     "main.a590034c.css.map": "/little-nehas-library-frontend/static/css/main.a590034c.css.map",
-    "main.ca2bfd72.js.map": "/little-nehas-library-frontend/static/js/main.ca2bfd72.js.map",
+    "main.25beaab1.js.map": "/little-nehas-library-frontend/static/js/main.25beaab1.js.map",
     "453.07c41362.chunk.js.map": "/little-nehas-library-frontend/static/js/453.07c41362.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a590034c.css",
-    "static/js/main.ca2bfd72.js"
+    "static/js/main.25beaab1.js"
   ]
 }
